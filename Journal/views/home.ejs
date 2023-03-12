@@ -1,0 +1,13 @@
+<%- include('partials/header');   -%>
+<h1>Home</h1>
+<p><%= content %></p>
+<% dailyContent.forEach((content)=>{ %>
+ <h1><%= content.title %></h1>
+ <% const trim = content.body.substring(0,100) %>
+ <p><%= trim %> ... 
+    <a href="/posts/<%= content.title %>">Read More</a>
+</p>
+<% }) %>
+
+
+<%- include('partials/footer');   -%>
