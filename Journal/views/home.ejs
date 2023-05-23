@@ -3,10 +3,13 @@
 <p><%= content %></p>
 <% dailyContent.forEach((content)=>{ %>
  <h1><%= content.title %></h1>
- <% const trim = content.body.substring(0,100) %>
+ <%  const date = content.createdAt.toLocaleDateString() %>
+<p><%= date %></p>
+ <% const trim = content.happenings.substring(0,100) %>
  <p><%= trim %> ... 
     <a href="/posts/<%= content.title %>">Read More</a>
 </p>
+
 <% }) %>
 
 
